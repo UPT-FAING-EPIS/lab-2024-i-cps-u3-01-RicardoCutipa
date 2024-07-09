@@ -3,7 +3,7 @@
 
 
 # SESION DE LABORATORIO N° 01: GESTION AUTOMATIZADA DE PRUEBAS CON GITHUB
-- Ricardo Cutipa Gutierrez
+- Ricardo Daniel Cutipa Gutierrez
 ## OBJETIVOS
   * Desarrollar la automatización de la gestión de pruebas de una aplicación utilizando Github Actions.
 
