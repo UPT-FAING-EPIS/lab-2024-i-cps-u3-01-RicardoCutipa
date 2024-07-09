@@ -60,7 +60,7 @@ name: Tarea Automatizada de ejecución de pruebas
 
 env:
   DOTNET_VERSION: '8.x'                      # La versión de .NET que estás usando
-  SONAR_ORG: 'RicardoCutipa'                 # Tu nombre de organización en SonarCloud
+  SONAR_ORG: 'ricardocutipa'                 # Tu nombre de organización en SonarCloud
   SONAR_PROJECT: 'ricardocutipa_bancaapp'    # El Project Key de tu proyecto en SonarCloud
 
 on:
