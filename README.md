@@ -65,7 +65,7 @@ env:
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]                     # Rama que dispara el workflow
   workflow_dispatch:
 
 jobs:
@@ -77,15 +77,11 @@ jobs:
       - name: Configurando la versión de NET
         uses: actions/setup-dotnet@v4
         with:
-          java-version: ${{ env.DOTNET_VERSION }}
+          dotnet-version: ${{ env.DOTNET_VERSION }}
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Configurando la versión de NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Restaurar los paquetes
         run: dotnet restore 
       - name: Ejecutar pruebas
@@ -101,7 +97,7 @@ jobs:
         with:
           name: CoverageReport 
           path: coveragereport 
-      - name: Publish coverage in build summary # 
+      - name: Publish coverage in build summary 
         run: cat coveragereport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY 
         shell: bash
       - name: Instalar Scanner
@@ -125,6 +121,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: bddreporte
           publish_dir: ./report/
+
 ```
 11. En el Visual Studio Code o en un terminal, subir o confirmar los cambios al repositorio.
 12. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Actions, se podra visualizar el siguiente resultado.
