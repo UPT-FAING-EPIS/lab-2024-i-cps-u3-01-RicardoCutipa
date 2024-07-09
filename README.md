@@ -59,9 +59,10 @@
 name: Tarea Automatizada de ejecución de pruebas
 
 env:
-  DOTNET_VERSION: '8.x'                     # la versión de .NET
-  SONAR_ORG: 'p-cuadros'                    # Nombre de la organización de sonar cloud
-  SONAR_PROJECT: 'p-cuadros_bancaapp'        # Key ID del proyecto de sonar
+  DOTNET_VERSION: '8.x'                      # La versión de .NET que estás usando
+  SONAR_ORG: 'ricardocutipa'                 # Tu nombre de organización en SonarCloud
+  SONAR_PROJECT: 'ricardocutipa_bancaapp'    # El Project Key de tu proyecto en SonarCloud
+
 on:
   push:
     branches: [ "main" ]
